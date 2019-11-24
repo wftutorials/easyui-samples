@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Working with EasyUI</title>
+    <link rel="stylesheet" type="text/css" href="./css/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="./css/icon.css">
+    <script type="text/javascript" src="./assets/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/jquery.easyui.min.js"></script>
+</head>
+<body>
+<h2>Forms</h2>
+<p>Showing form elements</p>
+<input id="tb" style="width:300px">
+<script>
+    $('#tb').textbox({
+        buttonText:'Search',
+        iconCls:'icon-search',
+        iconAlign:'left',
+        onChange : function(updated, old){
+            console.log(updated);
+        },
+        onClickButton : function(){
+            alert('the button was pressed')
+        }
+    })
+</script>
+</body>
+</html>

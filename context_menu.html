@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Working with EasyUI</title>
+    <link rel="stylesheet" type="text/css" href="./css/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="./css/icon.css">
+    <script type="text/javascript" src="./assets/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/jquery.easyui.min.js"></script>
+</head>
+<body>
+<h2>Show Menus</h2>
+<p>Showing a menu</p>
+<div id="mm" class="easyui-menu" style="width:120px;">
+    <div data-options="iconCls:'icon-save'">View</div>
+    <div>Edit</div>
+    <div>Delete</div>
+    <div>Exit</div>
+</div>
+<script>
+    $(document).on('contextmenu',function(e){
+        e.preventDefault();
+        $('#mm').menu('show', {
+            left: e.pageX,
+            top: e.pageY
+        });
+    });
+</script>
+</body>
+</html>

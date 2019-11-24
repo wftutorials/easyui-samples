@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Working with EasyUI</title>
+    <link rel="stylesheet" type="text/css" href="./css/default/easyui.css">
+    <script type="text/javascript" src="./assets/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/jquery.easyui.min.js"></script>
+</head>
+<body>
+<h2>Show Trees</h2>
+<p>Showing a list of trees.</p>
+<ul id="tt" class="easyui-tree">
+    <li>
+        <span>Employees</span>
+        <ul>
+            <li>
+                <span>HR</span>
+                <ul>
+                    <li><span><a data-id="1">Jerrod Mcdow</a></span></li>
+                    <li><span><a data-id="2">Sonya Sauage</a></span></li>
+                    <li><span><a data-id="3">Bennie Clover</a></span></li>
+                </ul>
+            </li>
+            <li>
+                <span>Engineering</span>
+                <ul>
+                    <li><span><a data-id="4">Alfonso Cohee</a></span></li>
+                    <li><span><a data-id="5">Mitchel Ruggles</a></span></li>
+                    <li><span><a data-id="6">Anamaria Taranto</a></span></li>
+                </ul>
+            </li>
+            <li>
+                <span>Sales</span>
+                <ul>
+                    <li><span><a data-id="7">Chan Toppin</a></span></li>
+                    <li><span><a data-id="8">Anamaria Taranto</a></span></li>
+                    <li><span><a data-id="9">Shaquana Sinquefield</a></span></li>
+                </ul>
+            </li>
+        </ul>
+
+    </li>
+</ul>
+<script>
+    $('#tt').tree({
+        onClick: function(node){
+            var el = $(node.text);
+            alert(el.text());
+        }
+    });
+</script>
+</body>
+</html>

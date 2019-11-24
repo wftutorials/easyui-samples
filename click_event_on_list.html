@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Working with EasyUI</title>
+    <link rel="stylesheet" type="text/css" href="./css/default/easyui.css">
+    <script type="text/javascript" src="./assets/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/jquery.easyui.min.js"></script>
+</head>
+<body>
+<h2>Data list</h2>
+<p>Showing a list of data.</p>
+<div style="margin:20px 0;"></div>
+<div id="dl">
+</div>
+<script>
+    $('#dl').datalist({
+        url: 'get_countries.php',
+        checkbox: false,
+        lines: true,
+        onClickRow : function(index, row){
+            alert("this is " + row.text + " = " +row.value);
+        }
+    });
+</script>
+</body>
+</html>
